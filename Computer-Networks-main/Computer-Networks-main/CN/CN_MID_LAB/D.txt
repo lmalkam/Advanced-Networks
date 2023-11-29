@@ -1,0 +1,2 @@
+/d I am simple statment to be stored in Document
+/d I am simple statment to be stored in Document

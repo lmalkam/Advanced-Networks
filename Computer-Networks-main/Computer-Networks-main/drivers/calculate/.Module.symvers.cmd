@@ -1,0 +1,1 @@
+cmd_/home/no_name/Desktop/207156_CN/drivers/calculate/Module.symvers := sed 's/ko$$/o/' /home/no_name/Desktop/207156_CN/drivers/calculate/modules.order | scripts/mod/modpost -m   -o /home/no_name/Desktop/207156_CN/drivers/calculate/Module.symvers -e -i Module.symvers   -T -

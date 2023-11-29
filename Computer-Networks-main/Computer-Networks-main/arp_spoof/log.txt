@@ -1,0 +1,14 @@
+Destination MAC: ff.ff.ff.ff.ff.ff
+Source MAC: 8.0.27.95.bd.54
+Type: 1544
+
+Hardware type: 100
+Protocol type: 8
+Hardware address size: 6
+Protocol address size: 4
+Opcode: 512
+Sender MAC: 8.0.27.95.bd.54
+Sender IP: 172.30.142.208
+Target MAC: ff.ff.ff.ff.ff.ff
+Target IP: 172.30.142.208
+

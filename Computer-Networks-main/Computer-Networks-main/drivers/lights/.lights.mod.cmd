@@ -1,0 +1,1 @@
+cmd_/home/no_name/Desktop/207156_CN/drivers/lights/lights.mod := printf '%s\n'   lights.o | awk '!x[$$0]++ { print("/home/no_name/Desktop/207156_CN/drivers/lights/"$$0) }' > /home/no_name/Desktop/207156_CN/drivers/lights/lights.mod

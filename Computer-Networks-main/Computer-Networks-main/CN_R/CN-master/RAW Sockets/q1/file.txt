@@ -1,0 +1,18 @@
+Assume that a process S in a server system is providing a connection-oriented service as follows: a client process C,
+connects to the sever process S, and sends a message containing: an IP address (IP5), and a file name (f1).  That means
+ the client process is requesting the server process to send contents of the specified file (f1 is in server computer system)
+ to processes which are in the computer system whose IP address is IP5. Now the server process makes arrangements and execs S2.
+ exe without command line arguments.
+ S2.c code is as below.
+main()
+{ char buf[50];
+         while  !eof(stdin) {
+          cin >>  buf ;
+          cout << buf ; }
+}
+Write programs for all processes.
+
+Consider the following figure. A Client Process sends an enquiry message to Server computer system, asking for what
+are all the service server processes available in it. All the service server processes will receive this message and
+each one of them replies to the client about its service information (All of them may not send replies at the same time).
+ The client now connects to the required service sever process. A client can connect to multiple server processes. Write code for all processes.

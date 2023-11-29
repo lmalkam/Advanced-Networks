@@ -1,0 +1,2 @@
+I will be printed in the file tricky.txt
+rahul

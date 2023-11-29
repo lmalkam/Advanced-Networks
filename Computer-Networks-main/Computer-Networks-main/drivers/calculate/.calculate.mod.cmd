@@ -1,0 +1,1 @@
+cmd_/home/no_name/Desktop/207156_CN/drivers/calculate/calculate.mod := printf '%s\n'   calculate.o | awk '!x[$$0]++ { print("/home/no_name/Desktop/207156_CN/drivers/calculate/"$$0) }' > /home/no_name/Desktop/207156_CN/drivers/calculate/calculate.mod

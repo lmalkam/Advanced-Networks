@@ -1,0 +1,1 @@
+cmd_/home/no_name/Desktop/207156_CN/drivers/lights/Module.symvers := sed 's/ko$$/o/' /home/no_name/Desktop/207156_CN/drivers/lights/modules.order | scripts/mod/modpost -m   -o /home/no_name/Desktop/207156_CN/drivers/lights/Module.symvers -e -i Module.symvers   -T -

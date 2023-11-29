@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "myhead.h": "c",
+        "tcp.h": "c",
+        "udp.h": "c"
+    }
+}

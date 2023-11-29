@@ -1,0 +1,1 @@
+#include<bits/stdc++.h>#include<sys/stat.h>#include<sys/types.h>#include<unistd.h>#include<fcntl.h>usingnamespacestd;intmain(){intc,b;cin>>a>>b>>c;fifo/;;ok;-_-;retrun0;}

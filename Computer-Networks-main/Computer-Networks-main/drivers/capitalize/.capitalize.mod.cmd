@@ -1,0 +1,1 @@
+cmd_/home/no_name/Desktop/207156_CN/drivers/capitalize/capitalize.mod := printf '%s\n'   capitalize.o | awk '!x[$$0]++ { print("/home/no_name/Desktop/207156_CN/drivers/capitalize/"$$0) }' > /home/no_name/Desktop/207156_CN/drivers/capitalize/capitalize.mod

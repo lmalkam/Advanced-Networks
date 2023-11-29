@@ -1,0 +1,68 @@
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/wait.h>
+
+#define MAX_PROCESSES 10
+
+int main() {
+  int fd[2 * MAX_PROCESSES];
+  int process_count = 0;
+  char *process_args[MAX_PROCESSES][MAX_ARGS];
+
+  // Define the pipeline of processes
+  process_args[process_count++] = (char *[]){"ls", "-l", NULL};
+  process_args[process_count++] = (char *[]){"grep", "^d", NULL};
+  process_args[process_count++] = (char *[]){"wc", "-l", NULL};
+
+  // Create the pipes
+  for (int i = 0; i < process_count - 1; i++) {
+    if (pipe(fd + i * 2) == -1) {
+      perror("pipe");
+      exit(1);
+    }
+  }
+
+  // Fork and execute the pipeline of processes
+  for (int i = 0; i < process_count; i++) {
+    int pid = fork();
+    if (pid == -1) {
+      perror("fork");
+      exit(1);
+    }
+    if (pid == 0) {
+      if (i > 0) {
+        if (dup2(fd[(i - 1) * 2], STDIN_FILENO) == -1) {
+          perror("dup2");
+          exit(1);
+        }
+      }
+      if (i < process_count - 1) {
+        if (dup2(fd[i * 2 + 1], STDOUT_FILENO) == -1) {
+          perror("dup2");
+          exit(1);
+        }
+      }
+      for (int j = 0; j < 2 * (process_count - 1); j++) {
+        close(fd[j]);
+      }
+      execvp(process_args[i][0], process_args[i]);
+      perror("execvp");
+      exit(1);
+    }
+  }
+
+  // Close unused pipe descriptors
+  for (int i = 0; i < 2 * (process_count - 1); i++) {
+    close(fd[i]);
+  }
+
+  // Wait for all processes to complete
+  for (int i = 0; i < process_count; i++) {
+    int status;
+    wait(&status);
+  }
+
+  return 0;
+}
+

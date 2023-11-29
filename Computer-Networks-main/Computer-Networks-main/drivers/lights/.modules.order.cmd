@@ -1,0 +1,1 @@
+cmd_/home/no_name/Desktop/207156_CN/drivers/lights/modules.order := {   echo /home/no_name/Desktop/207156_CN/drivers/lights/lights.ko; :; } | awk '!x[$$0]++' - > /home/no_name/Desktop/207156_CN/drivers/lights/modules.order

@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "myhead.h": "c",
+        "netdb.h": "c"
+    }
+}

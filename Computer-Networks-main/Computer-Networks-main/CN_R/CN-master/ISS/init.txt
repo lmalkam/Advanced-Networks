@@ -1,0 +1,4 @@
+s1 tcp 6011 ex 25 p
+s2 tcp 6022 in 15 t
+s3 udp 6033 in -1 f
+s4 tcp 6044 ex -1 p 
