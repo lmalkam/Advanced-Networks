@@ -175,7 +175,7 @@ sem_post(sem);
 MKFIFO
  ------------------------------------------------------------------------------------------------------------------------------
  
- #include <stdio.h>
+#include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
 #include <sys/types.h>
@@ -698,7 +698,3 @@ int send_fd(int socket, int fd_to_send)
 		dup2(usfd[1],0);
 		execvp(file_name,args);
 	}
-
-
-
-
